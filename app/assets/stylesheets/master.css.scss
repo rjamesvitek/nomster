@@ -18,12 +18,18 @@ h1, h2, h3, h4, h5, h6 {
 body {
 	background: url('/assets/ricepaper.png');
 	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-
-
 }
 
 .navbar.navbar-inverse {
 	background: url('/assets/mooning.png');
 	border-radius: 0;
 	box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.navbar-inverse .navbar-brand {
+	color:#FF8D0A;
+	font-family: kaushan_scriptregular, sans-serif;
+	font-weight: 600;
+	letter-spacing: -.03px;
+	font-size: 26px;
 }
