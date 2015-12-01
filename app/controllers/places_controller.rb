@@ -21,6 +21,7 @@ class PlacesController < ApplicationController
 	def show
 		@place = Place.find(params[:id])
 		@comment = Comment.new
+		@photo = Photo.new
 	end
 
 	def edit
@@ -57,7 +58,7 @@ class PlacesController < ApplicationController
 		redirect_to root_path
 	end
 
-	private
+private
 
 	def place_params
 		params.require(:place).permit(:name, :description, :address)
