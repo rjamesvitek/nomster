@@ -3,6 +3,7 @@ class PlacesController < ApplicationController
 
 	def index
 		@places = Place.order(:id).page(params[:page]).per(4)
+		@photo = Photo.last
 	end
 
 	def new
