@@ -1,5 +1,9 @@
+<% if @places.first.photos.present? %>
+
 <div class="col-xs-12" style="background-image: url('<%= @photo.picture %>');background-size:cover;background-repeat:no-repeat;background-position:center center;width:100%;height:200px;padding:0px;overflow:hidden;" >
 </div>
+
+<% end %>
 
 <% @places.each do |place| %>
 	<div class="booyah-box col-xs-10 col-xs-offset-1" >
