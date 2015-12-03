@@ -2,8 +2,11 @@ class PlacesController < ApplicationController
 	before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
 
 	def index
-		@places = Place.order(:id).page(params[:page]).per(4)
-		@photo = Photo.last
+		# @places = Place.order(:id).page(params[:page]).per(4)
+		params[:seed] ||= Random.new_seed
+		srand params[:seed].to_i
+		@places = Kaminari.paginate_array(Place.all.shuffle).page(params[:page]).per(4)
+		@photo = @places.first.photos.last
 	end
 
 	def new
