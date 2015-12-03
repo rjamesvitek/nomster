@@ -1,13 +1,38 @@
 
-<% if @places.first.photos.present? %>
 
-<a href="<%= place_path(@places.first) %>" >
-	<div class="col-xs-12" style="background-image: url('<%= @photo.picture %>');background-size:cover;background-repeat:no-repeat;background-position:center 30%;width:100%;height:auto;padding:0px;">
-		<img src="assets/bg.jpg" style="visibility:hidden;width:100%;" />
-	</div>
-</a>
 
-<% end %>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <!--<li data-target="#carousel-example-generic" data-slide-to="2"></li>-->
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <%= image_tag 'bg.jpg'%>
+      <div class="carousel-caption">
+        Chi-Town Dogs
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag 'karloff.jpg'%>
+      <div class="carousel-caption">
+        Looking for Hot Dogs?
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
 
 <% @places.each do |place| %>
 	<div class="booyah-box col-xs-10 col-xs-offset-1" >
