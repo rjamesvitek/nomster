@@ -1,7 +1,8 @@
+
 <% if @places.first.photos.present? %>
 
 <a href="<%= place_path(@places.first) %>" >
-	<div class="col-xs-12" style="background-image: url('<%= @photo.picture %>');background-size:cover;background-repeat:no-repeat;background-position:center 30%;width:100%;height:auto;padding:0px;" >
+	<div class="col-xs-12" style="background-image: url('<%= @photo.picture %>');background-size:cover;background-repeat:no-repeat;background-position:center 30%;width:100%;height:auto;padding:0px;">
 		<img src="assets/bg.jpg" style="visibility:hidden;width:100%;" />
 	</div>
 </a>
