@@ -1,5 +1,5 @@
 require 'test_helper'
-=begin
+
 class CommentTest < ActiveSupport::TestCase
 
 	test "humanized_rating" do
@@ -17,4 +17,4 @@ class CommentTest < ActiveSupport::TestCase
 	
 
 end
-=end
+

@@ -1,5 +1,5 @@
 require 'test_helper'
-
+=begin
 class CommentsControllerTest < ActionController::TestCase
 
 	test "create comment" do
@@ -18,3 +18,4 @@ class CommentsControllerTest < ActionController::TestCase
 		#2
 	end
 end
+=end
